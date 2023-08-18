@@ -1,11 +1,11 @@
 apiVersion: operators.coreos.com/v1alpha1
 kind: Subscription
 metadata:
-  name: grafana-operator
+  name: {{.values.name}}-operator
   namespace: dheeraj
 spec:
   channel: v4
-  name: grafana-operator
+  name: {{.values.name}}-operator
   source: community-operators
   sourceNamespace: openshift-marketplace
-  installPlanApproval: Manual
+  installPlanApproval: Automatic
